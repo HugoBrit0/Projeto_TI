@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/form.css" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        .card-img-top {
+            width: 100%; /* Faz com que a imagem ocupe toda a largura do card */
+            height: 200px; /* Definindo uma altura fixa */
+            object-fit: cover; /* Mantém a proporção da imagem, cortando o excesso se necessário */
+        }
+    </style>
+</head>
+<body>
+
+<header class="bg-primary text-white text-center py-5">
+    <h1>Bem-vindo à Nossa Loja de Carros e Motas</h1>
+    <p>A sua plataforma para comprar e vender veículos!</p>
+    <a href="/Signup" class="btn btn-light btn-lg">Registe-se</a>
+    <a href="/Login" class="btn btn-light btn-lg">Login</a>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Carros">Carros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Motas">Motas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Contactos">Contactos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <h2>Destaques</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="~/images/carro1.jpg" class="card-img-top" alt="Carro 1">
+                <div class="card-body">
+                    <h5 class="card-title">Carro 1</h5>
+                    <p class="card-text">Descrição breve do carro 1.</p>
+                    <a href="@Url.Action("Details", "Cars", new { id = 1 })" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="~/images/carro2.jpg" class="card-img-top" alt="Carro 2">
+                <div class="card-body">
+                    <h5 class="card-title">Carro 2</h5>
+                    <p class="card-text">Descrição breve do carro 2.</p>
+                    <a href="@Url.Action("Details", "Cars", new { id = 2 })" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="~/images/carro3.jpg" class="card-img-top" alt="Carro 3">
+                <div class="card-body">
+                    <h5 class="card-title">Carro 3</h5>
+                    <p class="card-text">Descrição breve do carro 3.</p>
+                    <a href="@Url.Action("Details", "Cars", new { id = 3 })" class="btn btn-primary">Ver mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-light text-center py-4">
+    <p>© 2024 Loja de Carros e Motas. Todos os direitos reservados.</p>
+    <p><a href="/Contactos">Contacte-nos</a></p>
+</footer>
+
+<script src="~/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

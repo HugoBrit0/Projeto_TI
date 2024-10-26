@@ -1,0 +1,16 @@
+﻿@model WebApplication1.Models.Car
+
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
+<p>Preço: @Model.Price €</p>
+<p>Ano: @Model.Year</p>
+
+<h2>Imagens Adicionais</h2>
+<div>
+    @foreach (var image in Model.AdditionalImages)
+    {
+        <img src="@image" alt="Imagem Adicional" style="width: 200px; height: auto; margin: 10px;" />
+    }
+</div>
+
+<a href="@Url.Action("Index", "Cars")" class="btn btn-primary">Voltar</a>
